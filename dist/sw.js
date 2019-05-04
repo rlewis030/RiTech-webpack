@@ -2,12 +2,12 @@ const PRECACHE = 'precache-v1';
 const RUNTIME = 'runtime';
 
 const PRECACHE_URLS = [
-    './index.html',
+    './dist/index.html',
     './',
     // Webpack Bundles
-    './js/bundle.js',
+    './dist/js/bundle.js',
     // Precached Images
-	'./assets/img/logo.png',
+	'./dist/assets/img/logo.png',
 ];
 
 // The install handler takes care of precaching the resources we always need
