@@ -1,0 +1,17 @@
+{
+    "name": "RiTech",
+    "short_name": "RiTech",
+    "start_url": "../",
+    "display": "standalone",
+    "background_color": "#000",
+    "theme_color": "#000",
+    "description": "Front facing website for my personal business, RiTech",
+    "orientation": "portrait",
+    "icons": [
+        {
+            "src": "./logo.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        }
+    ]
+}
