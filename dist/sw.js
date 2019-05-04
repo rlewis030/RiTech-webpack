@@ -4,6 +4,8 @@ const RUNTIME = 'runtime';
 const PRECACHE_URLS = [
     'index.html',
     './',
+    './js/bundle.js',
+    './assets/logo.png'
 ];
 
 // The install handler takes care of precaching the resources we always need
