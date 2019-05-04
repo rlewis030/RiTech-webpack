@@ -3,7 +3,7 @@ const RUNTIME = 'runtime';
 
 const PRECACHE_URLS = [
     'index.html',
-    './',
+    '/dist',
     './js/bundle.js',
     './assets/logo.png'
 ];
