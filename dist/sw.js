@@ -2,7 +2,8 @@ const PRECACHE = 'precache-v1';
 const RUNTIME = 'runtime';
 
 const PRECACHE_URLS = [
-    
+    'index.html',
+    './',
 ];
 
 // The install handler takes care of precaching the resources we always need
