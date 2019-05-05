@@ -1,7 +1,100 @@
 // Bootstrap SCSS
 @import "~bootstrap/scss/bootstrap";
 
+// Font Awesome Icons
+@import "~font-awesome/css/font-awesome.css";
+
 // Custom CSS
 .navbar {
     box-shadow: 0 0 8px rgba(0, 0, 0, .6);
 }
+
+/// Footer
+footer {
+    padding-top: 1.5rem !important;
+    background-color: #263238 !important;
+    color: #fff;
+    font-size: .9rem;
+}
+footer p i {
+    padding: .35rem 0;
+}
+footer .container {
+    margin-bottom: 1rem;
+}
+hr.footer {
+    width: 50%;
+    border-top: 1px solid #fff;
+}
+.btn-fb {
+    background-color: #3B5998 !important;
+}
+.btn-in {
+    background-color: #BC2A8D !important;
+}
+.btn-floating {
+    -webkit-box-shadow:
+        0 5px 11px 0 rgba(0,0,0,.18),
+        0 4px 15px 0 rgba(0,0,0,.15);
+    box-shadow:
+        0 5px 11px 0 rgba(0,0,0,.18),
+        0 4px 15px 0 rgba(0,0,0,.15);
+    width: 47px;
+    height: 47px;
+    position: relative;
+    z-index: 1;
+    vertical-align: middle;
+    display: inline-block;
+    overflow: hidden;
+    -webkit-transition: all .2s ease-in-out;
+    -o-transition: all .2s ease-in-out;
+    transition: all .2s ease-in-out;
+    margin: 10px;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+    padding: 0;
+    cursor: pointer;
+}
+.btn-floating i {
+    display: inline-block;
+    width: inherit;
+    text-align: center;
+    color: #fff;
+    font-size: 1.25rem;
+    line-height: 47px;
+}
+footer a {
+    color: #fff;
+}
+.footer-copyright {
+    overflow: hidden;
+    background-color: rgba(0, 0, 0, .2);
+    color: rgba(255, 255, 255, .6);
+}
+
+/// Media Queries
+
+@media (max-width: 992px) {
+    hr.footer {
+        width: 75% !important;
+    }
+}
+
+/*============= BOOTSTRAP BREAK POINTS:
+
+Extra small (xs) devices (portrait phones, less than 576px)
+No media query since this is the default in Bootstrap
+
+Small (sm) devices (landscape phones, 576px and up)
+@media (min-width: 576px { ... }
+
+Medium (md) devices (tablets, 768px and up)
+@media (min-width: 768px { ... }
+
+Large (lg) devices (desktops, 992px and up)
+@media (min-width:  992px { ... }
+
+Extra (xl) large devices (large desktops, 1200px and up)
+@media (min-width: 1200px { ... }
+
+==============*/

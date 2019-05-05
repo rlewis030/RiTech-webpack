@@ -1,4 +1,5 @@
 const path = require('path');
+const webpack = require('webpack');
 
 module.exports = {
     entry: './src/app.js',
@@ -6,10 +7,17 @@ module.exports = {
         filename: 'bundle.js',
         path: path.resolve(__dirname, 'dist/js')
     },
+    plugins: [
+        new webpack.ProvidePlugin({
+            $: "jquery",
+            jQuery: "jquery",
+            "window.jQuery": "jquery"
+        })
+    ],
     module: {
         rules: [
             {
-                test: /\.(scss)$/,
+                test: /\.(scss|css)$/,
                 use: [
                     {
                         // Adds CSS to the DOM by injecting a  `<style>` tag
@@ -33,6 +41,18 @@ module.exports = {
                     {
                         // Loads a SASS/SCSS file and compiles it to CSS
                         loader: 'sass-loader'
+                    }
+                ]
+            },
+            {
+                test: /\.(woff(2)?|ttf|eot|svg)(\?v=\d+\.\d+\.\d+)?$/,
+                use: [
+                    {
+                        loader: 'file-loader',
+                        options: {
+                            name: '[name].[ext]',
+                            outputPath: '../fonts/'
+                        }
                     }
                 ]
             }
