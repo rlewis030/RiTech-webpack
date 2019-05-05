@@ -5,8 +5,8 @@ import './scss/app.scss';
 // Font Awesome CSS
 import 'font-awesome/css/font-awesome.css';
 
-// Move content below navbar
 $(document).ready(() => {
+    // Move content below navbar
     var navHeight = $('.navbar')[0].offsetHeight;
     $('#page-content').css('margin-top', navHeight);
 });
