@@ -5,6 +5,17 @@ import './scss/app.scss';
 // Font Awesome CSS
 import 'font-awesome/css/font-awesome.css';
 
+// Google Maps API
+import { Map } from './map';
+
+document.addEventListener("DOMContentLoaded", function() {
+    let mapElement = document.getElementById('map-container');
+
+    Map.loadGoogleMapsApi().then(function(googleMaps) {
+        Map.createMap(googleMaps, mapElement);
+    });
+});
+
 $(document).ready(() => {
     // Move content below navbar
     var navHeight = $('.navbar')[0].offsetHeight;
