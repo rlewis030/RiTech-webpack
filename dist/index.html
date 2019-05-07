@@ -73,8 +73,58 @@
             </section>
 
             <!-- Contact Section -->
-            <section id="contact">
+            <section id="contact" class="text-center">
+                <div class="narrow">
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <div class="row justify-content-center">
+                                <div class="col-lg-10 text-left" id="contact-form">
+                                    <h3>Contact Me</h3>
 
+                                    <form>
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                    <label for="contact-first-name">First Name</label>
+                                                    <input class="form-input" id="contact-first-name" type="text" name="name">
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                    <label for="contact-last-name">Last Name</label>
+                                                    <input class="form-input" id="contact-last-name" type="text" name="name">
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                    <label for="contact-email">E-mail</label>
+                                                    <input class="form-input" id="contact-email" type="email" name="email">
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                    <label for="contact-phone">Phone</label>
+                                                    <input class="form-input" id="contact-phone" type="tel" name="phone">
+                                                </div>
+                                            </div>
+                                            <div class="col-12 col-msg">
+                                                <div class="form-group">
+                                                    <label for="contact-message">Your Message</label>
+                                                    <textarea class="form-input" id="contact-message" name="message"></textarea>
+                                                </div>
+                                            </div>
+                                            <div class="col-12">
+                                                <button class="btn btn-primary" onclick="sendEmail(event);">
+                                                    Send Message
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </section>
 
             <!-- Footer -->
@@ -121,5 +171,30 @@
 
         <!-- Webpack Bundle File -->
         <script src="./dist/js/bundle.js"></script>
+
+        <!-- EmailJS -->
+        <script type="text/javascript" src="https://cdn.emailjs.com/sdk/2.3.2/email.min.js"></script>
+        <script type="text/javascript">
+            (function(){
+                emailjs.init("user_VrokykbQ58y3reC5WyIMb");
+            })();
+
+            function sendEmail(e) {
+                e.preventDefault();
+
+                var contact_email = document.getElementById('contact-email').value;
+                var contact_name = document.getElementById('contact-first-name').value + ' ' + document.getElementById('contact-last-name').value;
+                var contact_phone = document.getElementById('contact-phone').value;
+                var contact_msg = document.getElementById('contact-message').value;
+
+                emailjs.send("gmail", "ritech",
+                    {
+                        "contact_email": contact_email,
+                        "contact_name": contact_name,
+                        "contact_phone": contact_phone,
+                        "contact_msg": contact_msg
+                    });
+            }
+        </script>
     </body>
 </html>
