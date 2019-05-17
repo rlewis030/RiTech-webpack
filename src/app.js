@@ -16,10 +16,19 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 });
 
-$(document).ready(() => {
-    // Move content below navbar
-    var navHeight = $('.navbar')[0].offsetHeight;
-    $('#page-content').css('margin-top', navHeight);
+// Smooth Scrolling
+$('.navbar a[href^="#"], .landing a[href^="#"]').on('click', function(event) {
+    var target = $($(this).attr('href'));
+
+    // Close responsive menu when scroll trigger is clicked
+    $('.navbar-collapse').collapse('hide');
+
+    if (target.length) {
+        event.preventDefault();
+        $('html, body').animate({
+            scrollTop: target.offset().top - 48
+        }, 1000);
+    }
 });
 
 // Service Worker Registration

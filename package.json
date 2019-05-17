@@ -4,7 +4,7 @@
   "main": "index.js",
   "scripts": {
     "build": "webpack",
-    "start": "http-server dist",
+    "start": "http-server dist -p 10000",
     "secure-start": "http-server dist -S -C cert.pem -o",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
