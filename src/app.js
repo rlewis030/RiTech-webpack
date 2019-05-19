@@ -16,6 +16,16 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 });
 
+// Lazy load images
+window.addEventListener('load', function() {
+    var lazyLoadImages = document.getElementsByClassName('lazy-load');
+    for (var i = 0; i < lazyLoadImages.length; i++) {
+        if (lazyLoadImages[i].getAttribute('data-src')) {
+            lazyLoadImages[i].setAttribute('src', lazyLoadImages[i].getAttribute('data-src'));
+        }
+    }
+}, false)
+
 // Smooth Scrolling
 $('.navbar a[href^="#"], .landing a[href^="#"]').on('click', function(event) {
     var target = $($(this).attr('href'));
