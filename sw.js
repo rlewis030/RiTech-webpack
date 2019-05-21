@@ -2,9 +2,9 @@ const PRECACHE = 'precache-v1';
 const RUNTIME = 'runtime';
 
 const PRECACHE_URLS = [
-    '/dist/index.html',
+    '/index.html',
     '/',
-    '/dist/js/bundle.js',
+    '/dist/bundle.js',
     '/dist/assets/logo.png'
 ];
 
