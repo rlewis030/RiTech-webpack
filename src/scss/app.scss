@@ -2,8 +2,8 @@
 @import "~bootstrap/scss/bootstrap";
 
 // Font Awesome Icons
-//@import "~font-awesome/css/font-awesome.css";
-@import "~@fortawesome/fontawesome-free/css/all.css";
+@import "~font-awesome/css/font-awesome.css";
+//@import "~@fortawesome/fontawesome-free/css/all.css";
 
 // Custom CSS
 @import url('https://fonts.googleapis.com/css?family=Work+Sans:400,700&font-display=swap');
@@ -114,6 +114,9 @@ img {
 /* About */
 #about .narrow div {
     margin-bottom: 1rem;
+}
+#about a i {
+    text-shadow: 0 0 5px rgba(0, 0, 0, .6);
 }
 
 /* Portfolio */
