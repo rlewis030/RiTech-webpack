@@ -2,7 +2,8 @@
 @import "~bootstrap/scss/bootstrap";
 
 // Font Awesome Icons
-@import "~font-awesome/css/font-awesome.css";
+//@import "~font-awesome/css/font-awesome.css";
+@import "~@fortawesome/fontawesome-free/css/all.css";
 
 // Custom CSS
 @import url('https://fonts.googleapis.com/css?family=Work+Sans:400,700&font-display=swap');
@@ -110,6 +111,11 @@ img {
     transition: all 350ms ease;
 }
 
+/* About */
+#about .narrow div {
+    margin-bottom: 1rem;
+}
+
 /* Portfolio */
 #portfolio img {
     margin-bottom: .75rem;
@@ -201,6 +207,24 @@ hr.footer {
 }
 .btn-li {
     background-color: #0077B5 !important;
+}
+.btn-html5 {
+    background-color: #e34f26 !important;
+}
+.btn-css3 {
+    background-color: #29A9DF !important;
+}
+.btn-js {
+    background-color: #FFCA28 !important;
+}
+.btn-bootstrap {
+    background-color: #5C3D86 !important;
+}
+.btn-php {
+    background-color: #7478AE !important;
+}
+.btn-font {
+    background-color: #2186E0 !important;
 }
 .btn-floating {
     -webkit-box-shadow:
